@@ -12,7 +12,7 @@ This document describes a scope of kafka web console.
 - As a user, I want to see content of a topic
 - As a user, I want to search thru the content of a topic
 - As a user, I want to send a message to a topic
-- As a user, I want to specify a pair of encoder and decoder to interact with a topic
+- As a user, I want to specify a topic format
 - As a user, I want to get info about topic partitions
 - As a user, I want to get content of a specific partition that belong to a topic
 - As a user, I want to create a consumer to get messages from a topic

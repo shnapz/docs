@@ -5,11 +5,8 @@ This document describes a scope of kafka web console.
 ### General
 
 - As a user, I want to see a list of available topics
-- As a user, I want to create a new topic
-- As a user, I want to modify existing topic
 - As a user, I want to see details of the existing topic
-- As a user, I want to remove the existing topic
-- As a user, I want to send a message to the topic
+- As a user, I want to see top-level information about the state of a cluster (dashboard)
 
 ### Topic
 - As a user, I want to see content of a topic
@@ -23,6 +20,17 @@ This document describes a scope of kafka web console.
 
 ### Ops
 - As a user, I want to get info about existing brokers in kafka cluster
+- As a user, I want to see a configuration parameters of a cluster
+- As a user, I want to create a new topic
+- As a user, I want to modify existing topic
+- As a user, I want to remove the existing topic
+- As a user, I want to send a message to the topic
 
 ### Monitoring
-- As a user, I want to get monitoring information from existing kafka cluster
+- As a user, I want to get information about server metrics
+- As a user, I want to get information about producer metrics
+- As a user, I want to get information about connection metrics
+- As a user, I want to get information about broker metrics
+- As a user, I want to get information about topic metrics
+- As a user, I want to get information about consumer metrics (including consumer groups)
+- As a user, I want to get information about request metrics

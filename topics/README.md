@@ -209,3 +209,56 @@ Content-Type: application/json
     }
 ]
 ```
+
+## Get Topic Partition Details
+
+> GET /topics/(string: topic_name)/partitions/(int: partition_id)
+
+Get metadata about a single partition in the topic.
+
+##### Parameters:
+
+* topic_name (string) – name of the topic
+* partition_id (int) – ID of the partition to inspect
+
+##### Response JSON object:
+
+* partitions[i].leader (int) – the broker ID of the leader for this partition
+* partitions[i].replicas (array) – list of replicas for this partition, including the leader
+* partitions[i].replicas[j].broker (array) – broker ID of the replica
+* partitions[i].replicas[j].leader (boolean) – true if this replica is the leader for the partition
+* partitions[i].replicas[j].in_sync (boolean) – true if this replica is currently in sync with the leader
+
+##### Status Codes:
+
+*404 Not Found –
+   * Error code 40401 – Topic not found
+   
+##### Example request:
+
+```javascript
+GET /topics/test/partitions/1 HTTP/1.1
+```
+##### Example response:
+
+```javascript
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+ {
+   "partition": 1,
+   "leader": 1,
+   "replicas": [
+     {
+       "broker": 1,
+       "leader": true,
+       "in_sync": true,
+     },
+     {
+       "broker": 2,
+       "leader": false,
+       "in_sync": true,
+     }
+   ]
+ }
+```
